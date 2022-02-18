@@ -1,0 +1,35 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& v) {//morre algorithm make candidate element and make a counter inisilise it to 1 and start traversing the array and if if find elements are not same the 
+    the reduce the counter else increse the counter and then check if counter ==0 if it is equal change the majority elent and at lats count this element if its count is>n/2
+    then this candidate element is majority element else return -1;
+        int me=v[0];
+        int c=1;
+        for(int i=1;i<v.size();i++)
+        {
+            if(v[i]!=me)
+            {
+                c--;
+            }
+            else
+                c++;
+            if(c==0)
+            {
+                me=v[i];
+                c=1;
+            }
+        }
+        
+        int count=0;
+        for(int i=0;i<v.size();i++)
+        { if(me==v[i])
+            count++;
+            
+        }
+        if(count>v.size()/2)
+            return me;
+        else
+            return -1;
+        
+    }
+};
