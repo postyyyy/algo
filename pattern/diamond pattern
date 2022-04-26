@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 1; i <= n; i++) {
+    for (int sp = 1; sp <= (n - i); sp++)
+      cout << " ";
+    for (int sm = 1; sm <= ((2 * i) - 1); sm++)
+      cout << "*";
+    cout << endl;
+
+  }
+
+  for (int i = 2; i <= n; i++) {
+    for (int j = 1; j < i; j++)
+      cout << " ";
+    for (int k = 1; k <= (2 * n - ((2 * i) - 1)); k++)
+      cout << "*";
+
+    cout << endl;
+
+  }
+
+  return 0;
+}// i=2 se start kar do apne app diamond ban jaega 
+pahle hill print kiye then reverse hill with i=2
