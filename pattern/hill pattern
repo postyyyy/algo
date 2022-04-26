@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{   int n;
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{  for(int sp=1;sp<=(n-i);sp++)//logic is very simple first think to print the space and the *
+		cout<<" ";
+		for(int sm=1;sm<=((2*i)-1);sm++)
+			cout<<"*";
+		cout<<endl;
+		
+
+
+
+
+
+	}
+
+
+
+	return 0;
+}
