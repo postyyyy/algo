@@ -1,0 +1,223 @@
+****here our pair will sort by default in asd according to first;
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  vector< pair <int,int> > vect;
+    int arr[] = {10, 20, 5, 40 ,1,90};
+    int arr1[] = {30, 60, 20, 50,6,1};
+    int n = sizeof(arr)/sizeof(arr[0]);
+  cout<<n<<endl;
+   
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(arr[i],arr1[i]) );
+  sort(vect.begin(),vect.end());
+    // Printing the vector
+    for (int i=0; i<n; i++)
+    {
+       
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+
+    return 0;
+}
+or u can make camparator like this 
+
+
+
+
+
+*****it will sort the vaector pof pairs in ase according to first;
+#include <bits/stdc++.h>
+using namespace std;
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+    return p1.first<p2.first;
+    ///2 pair campare ho rahe hai ,wo pair return karo jiska first chota hai;
+
+}
+int main()
+{
+  vector< pair <int,int> > vect;
+    int arr[] = {10, 20, 5, 40 ,1,90};
+    int arr1[] = {30, 60, 20, 50,6,1};
+    int n = sizeof(arr)/sizeof(arr[0]);
+  cout<<n<<endl;
+   
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(arr[i],arr1[i]) );
+  sort(vect.begin(),vect.end(),cmp);
+    // Printing the vector
+    for (int i=0; i<n; i++)
+    {
+       
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+****here our pair will sort dse according to first;
+#include <bits/stdc++.h>
+using namespace std;
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+    return p1.first>p2.first;
+//2 pair campare ho rahe hai to hamko return karo aisa pair jiska first bada ho;
+}
+int main()
+{
+  vector< pair <int,int> > vect;
+    int arr[] = {10, 20, 5, 40 ,1,90};
+    int arr1[] = {30, 60, 20, 50,6,1};
+    int n = sizeof(arr)/sizeof(arr[0]);
+  cout<<n<<endl;
+   
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(arr[i],arr1[i]) );
+  sort(vect.begin(),vect.end(),cmp);
+    // Printing the vector
+    for (int i=0; i<n; i++)
+    {
+       
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+
+    return 0;
+}
+
+
+
+******here our pair will sort asd according to second;
+
+#include <bits/stdc++.h>
+using namespace std;
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+    return p1.second<p2.second;
+    
+////2 pair compare ho rahe hai aur hame wo pair return karo jiska seond chota hai;
+}
+int main()
+{
+  vector< pair <int,int> > vect;
+    int arr[] = {10, 20, 5, 40 ,1,90};
+    int arr1[] = {30, 60, 20, 50,6,1};
+    int n = sizeof(arr)/sizeof(arr[0]);
+  cout<<n<<endl;
+   
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(arr[i],arr1[i]) );
+  sort(vect.begin(),vect.end(),cmp);
+    // Printing the vector
+    for (int i=0; i<n; i++)
+    {
+       
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+
+    return 0;
+}
+
+
+******here our pair will sort dse according to second;
+
+#include <bits/stdc++.h>
+using namespace std;
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+    return p1.second>p2.second;
+    ///////2 pair compare ho rahe hai aur hame wo pair return karo jiska seond bada  hai;
+
+}
+int main()
+{
+  vector< pair <int,int> > vect;
+    int arr[] = {10, 20, 5, 40 ,1,90};
+    int arr1[] = {30, 60, 20, 50,6,1};
+    int n = sizeof(arr)/sizeof(arr[0]);
+  cout<<n<<endl;
+   
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(arr[i],arr1[i]) );
+  sort(vect.begin(),vect.end(),cmp);
+    // Printing the vector
+    for (int i=0; i<n; i++)
+    {
+       
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+
+    return 0;
+}
+QUESTION 1-   sort in dse by first and if 2 pair k first bararar hai to sort in ase by there second value;
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+   if(p1.first==p2.first)
+   return p1.second<p2.second;
+   else
+   return p1.first>p2.first;
+    }
+     ans hoga- 90,1
+               40,50
+               10,30
+               10,60
+               5,20
+               1,6
+ 
+QUESTION 2-   sort in dse by first and if 2 pair k first bararar hai to sort in dse by there second value;
+#include <bits/stdc++.h>
+using namespace std;
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+   if(p1.first==p2.first)
+   return p1.second>p2.second;
+   else
+   return p1.first>p2.first;
+    
+
+}
+ans-   int arr[] = {10, 10, 5, 40 ,1,90};
+    int arr1[] = {60, 30, 20, 50,6,1};
+    ans hoga- 90,1
+               40,50
+               10,60
+               10,30
+               5,20
+               1,6
+QUESTION3- sort in dse (second) ko aur agar 2 second bara bar hai to sort in ase
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+    if(p1.second==p2.second)
+    return p1.first<p2.first;
+    else
+    return p1.second>p2.second;
+   
+    
+
+}
+QUESTION3- sort in dse (second) ko aur agar 2 second bara bar hai to sort in dse
+static bool cmp(pair<int,int> &p1,pair<int,int> &p2)
+{
+    if(p1.second==p2.second)
+    return p1.first>p2.first;
+    else
+    return p1.second>p2.second;
+   
+    
+
+}
